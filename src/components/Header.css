@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+
+
+
+
+.header {
+    height: fit-content;
+    width: 100%;
+    background: linear-gradient(228deg, #004ba3, #5ac6d7);
+    background-size: 400% 400%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    -webkit-animation: AnimationName 11s ease infinite;
+    -moz-animation: AnimationName 11s ease infinite;
+    animation: AnimationName 11s ease infinite;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.heading{
+    margin-left: 2rem;
+    /* padding-top: 10px; */
+    font-family: 'Poor Story', cursive ;
+    font-size: 6vh;
+    color: aliceblue;
+    letter-spacing: 4px;
+
+}
+.links{
+    width: 10rem;
+}
+.link-img{
+    width: 2.5rem;
+    margin: 0 1rem;
+
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
