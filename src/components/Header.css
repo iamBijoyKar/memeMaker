@@ -9,7 +9,7 @@
     width: 100%;
     background: linear-gradient(228deg, #004ba3, #5ac6d7);
     background-size: 400% 400%;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 999;
@@ -20,6 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 5px 5px 7px rgb(117, 117, 117);
 }
 .heading{
     margin-left: 2rem;

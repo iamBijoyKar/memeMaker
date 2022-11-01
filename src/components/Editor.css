@@ -1,0 +1,88 @@
+
+
+
+
+
+
+
+
+
+
+
+.editor-sec{
+    padding: 20px;
+    width: 80vw;
+    height: 80vh;
+    /* background-color: antiquewhite; */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    margin: 28vh auto;
+    border-radius: 4px;
+    background: linear-gradient(45deg,#005b74 40%,#057dcd);
+    background-size: 400% 400%;
+    -webkit-animation: gradAnimation 8s ease infinite;
+    -moz-animation: gradAnimation 8s ease infinite;
+    animation: gradAnimation 8s ease infinite;
+}
+.canvas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border : 1.5px dashed white;
+
+
+}
+
+.canvas img{
+    width: 4rem;
+}
+#upload-img.activate{
+    animation: jump 1s ease infinite;
+}
+.canvas button{
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+    background-color: whitesmoke;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+}
+.canvas.activate{
+    border: 1.5px solid whitesmoke;
+}
+.canvas input{
+    display: none ;
+}
+
+@keyframes jump{
+    0%{
+        transform: none;
+    }
+    50%{
+        transform: translateY(-1rem);
+    }
+    100%{
+        transform: none;
+
+    }
+}
+
+@-webkit-keyframes gradAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes gradAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes gradAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
