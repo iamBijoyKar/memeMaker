@@ -1,6 +1,5 @@
 import './Editor.css';
-import uploadImg from './../media/upload.png';
-
+import ImageDropZone from './DragNDrop';
 function Editor(){
 
     function canvasClicked(event){
@@ -29,12 +28,16 @@ function Editor(){
     function drop(event){
         event.preventDefault()
         const canvas = document.querySelector('.canvas')
-        canvas.onDrop(
+        const uploadImg = document.querySelector('#upload-img')
+        uploadImg.classList.remove('activate')
+        document.querySelector('#canvas-heading').innerHTML = 'Drag and Drop to Upload'
+        canvas.classList.remove('activate')
+        // canvas.onDrop(
+        // console.log('drop')
+        // )
         console.log('drop')
-        )
-        console.log('drop')
-        const file = event.dataTransfer.files[0]
-        console.log(file)
+        // const file = event.dataTransfer.files[0]
+        // console.log(file)
         event.stopPropagation();
 
     }
@@ -42,12 +45,8 @@ function Editor(){
     return(
         <section className='section section2'>
             <div className='editor-sec' >
-                <div className='canvas' onDragOver={ canvasDragOver } onClick={ canvasClicked } onDragLeave={ canvasDragEnd } onDragExit= { drop }>
-                    <img src={uploadImg} alt={ 'uplaod icon' } id="upload-img" />
-                    <h2 id='canvas-heading'>Drag and Drop to Upload file</h2>
-                    <span>Or</span>
-                    <button>Browse File</button>
-                    <input type='file' className='canvas-input' name='image-file' />
+                <div className='canvas' onDragOver={ canvasDragOver } onDragLeave={ canvasDragEnd }  >
+                    <ImageDropZone />
                 </div>
                 <div className='controls'>
 
@@ -59,3 +58,7 @@ function Editor(){
 
 
 export default Editor;
+
+
+
+// onDragOver={ canvasDragOver } onClick={ canvasClicked } onDragLeave={ canvasDragEnd } onDragExit= { drop }
