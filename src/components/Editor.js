@@ -1,12 +1,7 @@
 import './Editor.css';
 import ImageDropZone from './DragNDrop';
+import Controls from './Controls';
 function Editor(){
-
-    function canvasClicked(event){
-        const input = document.querySelector('.canvas-input')
-        input.click();
-        event.stopPropagation();
-    }
     function canvasDragOver(event){
         const canvas = document.querySelector('.canvas')
         const uploadImg = document.querySelector('#upload-img')
@@ -48,8 +43,8 @@ function Editor(){
                 <div className='canvas' onDragOver={ canvasDragOver } onDragLeave={ canvasDragEnd }  >
                     <ImageDropZone />
                 </div>
-                <div className='controls'>
-
+                <div className='controls-container'>
+                    <Controls/>
                 </div>
             </div>
         </section>
@@ -58,7 +53,3 @@ function Editor(){
 
 
 export default Editor;
-
-
-
-// onDragOver={ canvasDragOver } onClick={ canvasClicked } onDragLeave={ canvasDragEnd } onDragExit= { drop }

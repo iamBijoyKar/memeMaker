@@ -1,7 +1,26 @@
 #previewImg{
-    width: 100%;
-    height: 100%;
+    height:100%;
+    aspect-ratio: 1/1;
+    max-height: 100%;
 }
 .none{
     display: none;
+}
+.visible{
+    display: none;
+}
+.visible.active{
+    display: block;
+    z-index: 99;
+    position: absolute;
+    font-size: 35px;
+}
+#upper-text{
+    top:0;
+}
+#lower-text{
+    bottom: 0;
+}
+.dropzone{
+    position: relative;
 }

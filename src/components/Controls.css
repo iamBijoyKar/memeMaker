@@ -1,0 +1,19 @@
+
+.controls{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#upper-input,#lower-input{
+    width: 100%;
+    height: 2.0rem;
+    margin: 1rem;
+}
+
+#generate-btn{
+    padding: .6rem 2rem;
+    margin: 2rem;
+    border-radius: 3px;
+}

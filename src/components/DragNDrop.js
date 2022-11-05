@@ -31,17 +31,15 @@ function ImageDropZone({ value , onChange }){
             invisibles.forEach(invisible =>{
                 invisible.classList.add('none')
             })
+            let visibles =document.querySelectorAll('.visible')
+            visibles.forEach(visible =>{
+                visible.classList.add('active')
+            })
             img.id ='previewImg'
             // console.log(img)
             document.querySelector(Dropzone).appendChild(img)
         }, false)
         reader.readAsDataURL(file)
-        
-        
-        // setLoading(true)
-        // uploadImage(acceptedfiles[0])
-        //     .then((json) => onChange(json.url))
-        //     .finally(()=> setLoading(false))
     },
     [] )
 
@@ -51,12 +49,13 @@ function ImageDropZone({ value , onChange }){
     })
     return(
 
-        <Dropzone {...getRootProps()}>
+        <Dropzone className='dropzone' {...getRootProps()}>
             <input {...getInputProps()} />
                 <img src={uploadImg} alt={ 'uplaod icon' } id="upload-img" className='invisible' />
                 <h2 id='canvas-heading' className='invisible'>Drag and Drop to Upload file</h2>
                 <span className='invisible'>Or Click</span>
-                {/* {imgSrc!=null? <img src={imgSrc}/> : console.log(imgSrc)} */}
+                <h3 id='upper-text' className='visible'></h3>
+                <h3 id='lower-text' className='visible'></h3>                
         </Dropzone>
 
     )
@@ -64,19 +63,3 @@ function ImageDropZone({ value , onChange }){
 }
 
 export default ImageDropZone
-
-
-// <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
-//                     {({getRootProps, getInputProps}) => (
-//                         <section>
-//                         <div {...getRootProps()}>
-//                             <input {...getInputProps()} />
-//                             <img src={uploadImg} alt={ 'uplaod icon' } id="upload-img" />
-//                             <h2 id='canvas-heading'>Drag and Drop to Upload file</h2>
-//                             <span>Or</span>
-//                             <button>Browse File</button>
-//                             <input type='file' className='canvas-input' name='image-file' />
-//                         </div>
-//                         </section>
-//                     )}
-//                     </Dropzone>
