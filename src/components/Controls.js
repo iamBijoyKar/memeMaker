@@ -1,4 +1,5 @@
 import './Controls.css';
+import domtoimage from 'dom-to-image';
 
 function DisplayTextUpper(event){
     const text = event.target.value
@@ -19,7 +20,16 @@ function FontSize(event){
     document.querySelector('#lower-text').style.fontSize = `${size}px`
     document.querySelector('.range-value').innerHTML = size
 }
-
+function Generate(event){
+    const canvas = document.querySelector('.canvas')
+    domtoimage.toJpeg(canvas, { quality: 0.95 })
+    .then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = 'generated-meme.jpeg';
+        link.href = dataUrl;
+        link.click();
+    });
+}
 
 function Controls(){
 
@@ -31,7 +41,7 @@ function Controls(){
             <input type='text' id='lower-input' onChange={ DisplayTextLower } placeholder='Enter lower text here'/>
             <label for='color-input'>Pick text color : <input type='color' onChange={ DisplayColor } id='color-input'/></label>
             <label for='font-size-input'>Font Size : <input type='range'  min='20' max='50' id='font-size-input' onChange={ FontSize } /><p className='range-value'></p></label>
-            <button id='generate-btn'>Generate</button>
+            <button id='generate-btn' onClick={ Generate } >Generate</button>
         </div>
     )
 }
