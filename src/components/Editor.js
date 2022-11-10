@@ -39,7 +39,7 @@ function Editor(){
 
     return(
         <section className='section section2'>
-            <div className='editor-sec' >
+            <div className='editor-sec' id='editor' >
                 <div className='canvas' onDragOver={ canvasDragOver } onDragLeave={ canvasDragEnd }  >
                     <ImageDropZone />
                 </div>

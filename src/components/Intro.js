@@ -1,4 +1,5 @@
 import "./Intro.css";
+import * as Scroll from 'react-scroll';
 // import Header from "./Header";
 import rightArrow from '../media/right-arrow.png';
 import memeImg from '../media/meme.png';
@@ -36,9 +37,9 @@ const Intro = () => {
             Meme Hospital is a Meme Maker Web App. Make your meme and download Free! Or download the most popular memes.... 
         </p>
         <img src={memeImg} alt="" className="meme-img"/>
-        <button type="submit"  className="intro-btn">
+        <Scroll.Link  type="submit" to="editor" spy={true} smooth={true} offset={50} duration={500}  className="intro-btn">
             Get Started <img src={rightArrow} alt="" className="arrow-img" />
-        </button>
+        </Scroll.Link>
       </div>
     </section>
   );
