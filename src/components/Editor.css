@@ -12,7 +12,8 @@
 .editor-sec{
     padding: 20px;
     width: 80vw;
-    height: 80vh;
+    min-height: 80vh;
+    height: fit-content;
     /* background-color: antiquewhite; */
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -32,8 +33,7 @@
     justify-content: center;
     padding: 10px;
     border : 1.5px dashed white;
-
-
+    
 }
 
 .canvas img{
@@ -85,4 +85,14 @@
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
+}
+
+@media only screen and (max-width:900px){
+    .editor-sec{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+        height: 90vh;
+    }
+    
 }

@@ -20,19 +20,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 5px 5px 7px rgb(117, 117, 117);
+    box-shadow: 2px 2px 3px rgb(88, 88, 88);
 }
 .heading{
     margin-left: 2rem;
     /* padding-top: 10px; */
     font-family: 'Poor Story', cursive ;
-    font-size: 6vh;
+    font-size: 4vh;
     color: aliceblue;
     letter-spacing: 4px;
 
 }
 .links{
-    width: 10rem;
+    width: fit-content;
 }
 .link-img{
     width: 2.5rem;
@@ -54,4 +54,12 @@
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
+}
+
+
+@media only screen and (max-width:900px){
+    .link-img{
+        width: 2rem;
+        margin: 5px 5px;
+    }
 }

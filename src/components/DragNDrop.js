@@ -19,6 +19,7 @@ function ImageDropZone({ value , onChange }){
     const [loading, setLoading] = useState(false)
 
     const onDrop = useCallback((acceptedfiles) =>{
+        document.querySelector('.canvas').style.backgroundColor = 'white'
         console.log(acceptedfiles)
         const file = acceptedfiles[0]
         const reader = new FileReader()

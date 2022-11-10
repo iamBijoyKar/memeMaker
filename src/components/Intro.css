@@ -2,31 +2,11 @@
 
 
 
-
-.custom-shape-divider-top-1667127807 {
-    position: absolute;
-    top: 12.5vh;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-top-1667127807 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
-}
-
-.custom-shape-divider-top-1667127807 .shape-fill {
-    fill: #22EEDD;
-}
-
 .intro-sec{
     padding: 20px;
     width: 80vw;
     height: 80vh;
+    
     /* background-color: antiquewhite; */
     margin: 28vh auto;
     border-radius: 4px;
@@ -54,9 +34,7 @@
     grid-row: 1/2;
     font-size: 50px;
     cursor: pointer;
-    font-family: 'Permanent Marker', cursive;
-
-
+    font-family: cursive;
 }
 .jumps{
     display: inline-block;
@@ -72,13 +50,6 @@
     margin: 3rem 1rem 0 1rem;
     color: #ffffff;
     font-weight: bold;
-    /* background: linear-gradient(to right,#fff,#000);
-    -webkit-background-clip: text;
-    color: transparent;
-    background-size: 400% 400%;
-    -webkit-animation: gradAnimation 8s ease infinite;
-    -moz-animation: gradAnimation 8s ease infinite;
-    animation: gradAnimation 8s ease infinite; */
 }
 
 .intro-btn{
@@ -144,3 +115,62 @@
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
+
+
+@media only screen and (max-width:900px ){
+    .intro-sec{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+    .meme-img{
+        width: 100%;
+        aspect-ratio: 1/1;
+        margin-top: 1rem;
+    }
+    .intro-heading{
+        font-size: 32px;
+    }
+    .intro-des{
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+    .intro-btn{
+        font-size: 1rem;
+    }
+    .arrow-img{
+        width: 1rem;
+    }
+}
+
+
+/* @media only screen and (min-width: 900px) and (max-width:1500px){
+    .intro-sec{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        grid-template-columns: none;
+        grid-template-rows: none;
+        justify-content: center;
+        align-items: center;
+    }
+    .meme-img{
+        width: 100%;
+        aspect-ratio: 1/1;
+        margin-top: 1rem;
+    }
+    .intro-heading{
+        font-size: 60px;
+    }
+    .intro-des{
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+    .intro-btn{
+        font-size: 2rem;
+        padding: 10px 1rem;
+    }
+    .arrow-img{
+        width: 1rem;
+    }
+} */
